@@ -1,6 +1,14 @@
-// Sum of naturals divisible by either 3 or 5
+// 2. Greatest common divisor
+//
+// if x is gcd
+// a = N*x and b = M*x 
+// a = b*C + c
+// N*x = M*x*C+ c
+// (N-MC)*x = c
+// c's contain x
 
 #include<iostream>
+#include "exmath.h"
 
 int main(int argc, char** argv) {
     int num1 =0;
@@ -9,20 +17,5 @@ int main(int argc, char** argv) {
     std::cin >> num1;
     std::cout << "and input number";
     std::cin >> num2;
-    if(num1 == num2) {
-        std::cout << num1;
-        return 0;
-    }
-    if(num1 > num2) {
-        int tmp = num1;
-        num1 = num2;
-        num2 = tmp;
-    }
-    for(int i=num1;i>1;i--) {
-        if(num1%i == 0 && num2%i == 0) {
-            std::cout << i << std::endl;
-            return 0;
-        }
-    }
-    std::cout << std::endl <<"END="<< num1 << std::endl ;
+    std::cout << std::endl <<"END="<< gcd(num1,num2) << std::endl ;
 }
