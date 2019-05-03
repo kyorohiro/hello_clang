@@ -6,3 +6,4 @@ add_executable(hello
 )
 
 add_subdirectory(math)
+add_subdirectory(lang)
