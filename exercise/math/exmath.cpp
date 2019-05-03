@@ -19,3 +19,8 @@ int gcd(int num1, int num2) {
     }
     return num2;
 }
+
+int lcm(int num1, int num2) {
+    int t = gcd(num1,num2);
+    return (num1/t)*num2;
+}
